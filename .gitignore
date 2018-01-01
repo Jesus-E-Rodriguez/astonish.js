@@ -1,0 +1,7 @@
+# Mac OS generated files #
+######################
+.DS_Store
+.DS_Store?
+client
+config.codekit3
+node_modules

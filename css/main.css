@@ -2,64 +2,42 @@
 and the media query that determines at which window widths they are visible
 and hidden respectively. */
 .astonish {
-     visibility: visible;
+     opacity: 1;
+     transition: none;
 }
+
 img {
-     border: 2px solid #2172ed99;
+     border: 2px solid #79AAF4;
      box-shadow: 0px 5px 4px -2px rgba(0, 0, 0, 0.5);
-     width: 100%;
-     height: 100%;
-     max-height: 250px;
-     max-width: 250px;
+     max-width: 100%;
+     max-height: 100%;
+     object-fit: cover;
 }
 h1 {
-     color: #2172ed99;
+     color: #79AAF4;
      margin: 4rem 0;
+     text-align: center;
 }
-.fa {
-     font-size: 3rem;
-}
-.hover {
-     -webkit-animation: hover 2s infinite linear;
-            animation: hover 2s infinite linear;
-}
+
 .section {
      padding: 4rem 0;
+     overflow: hidden;
 }
-.section .row {
-     margin-bottom: 1rem;
-}
-.take-space {
-     height: 1800px;
-}
-.pop {
-     color: #f35626;
-     background-image: -webkit-linear-gradient(92deg, #2172ed99, #ed21a399);
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
-     -webkit-animation: hue 60s infinite linear;
-}
-@keyframes hover {
-     0%, 100% {
-          transform: translateY(0);
-     }
-     50% {
-          transform: translateY(40%);
-     }
-}
-@keyframes hue {
-     0% {
-       -webkit-filter: hue-rotate(0deg);
-     }
-     100% {
-       -webkit-filter: hue-rotate(-360deg);
-     }
-}
-@media and screen (min-width: 768px) {
+
+@media (min-width: 768px) {
      .astonish {
-          visibility: hidden;
+          opacity: 0;
+          transition: all 0.3s ease-in-out;
      }
      .animated {
-          visibility: visible;
+          opacity: 1;
      }
+}
+
+.float-left {
+     margin: 0 1rem 1rem 0;
+}
+
+.float-right {
+     margin: 0 0 1rem 1rem;
 }
